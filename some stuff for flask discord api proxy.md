@@ -76,7 +76,6 @@ Delete Message
 ```py
 @app.route('/discord-delete-message', methods=['GET'])
 def discord_delete_message():
-    # Extract parameters from the JSON body of the request
     data = request.args
     
     token = data.get('token')
@@ -110,7 +109,6 @@ Replying to interactions
 ```py
 @app.route('/discord-reply-interaction', methods=['GET'])
 def discord_reply_interaction():
-    # Extract parameters from the JSON body of the request
     data = request.args
     
     interaction_id = data.get('interaction_id')
